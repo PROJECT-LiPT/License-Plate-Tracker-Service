@@ -1,6 +1,6 @@
 # License Plate Tracker
  # How to install :
-- Install Python, Nodejs, environment variable path for both (usually automatically)
+- Install Python, Nodejs, Yarn, environment variable path for both (usually automatically)
 - Update pip: `py -m pip install -U pip`
 - Go to service folder, run 
 
