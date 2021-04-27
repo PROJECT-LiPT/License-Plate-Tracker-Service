@@ -122,6 +122,7 @@ _mailinglist
 .idea/
 docs/_build/
 .vscode
+*.png
 
 # Coverage reports
 htmlcov/
