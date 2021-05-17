@@ -55,7 +55,10 @@ class E2E(object):
             self.image = draw_labels_and_boxes(self.image, license_plate, coordinate)
 
         # cv2.imwrite('example.png', self.image)
-        return self.image
+        # THIS RETURN AN IMAGE
+        # return self.image
+        # THIS RETURN A STRING
+        return license_plate
 
     def segmentation(self, LpRegion):
         # apply thresh to extracted licences plate

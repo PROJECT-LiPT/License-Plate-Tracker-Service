@@ -1,4 +1,4 @@
-from recognition import E2E
+from recognition import E2E # type: ignore
 import cv2
 from pathlib import Path
 import argparse

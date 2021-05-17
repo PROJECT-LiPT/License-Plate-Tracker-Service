@@ -2,13 +2,17 @@ import data_utils as utils
 import cv2
 import numpy as np
 
-
 class detectNumberPlate(object):
     def __init__(self, threshold=0.5):
-        args = utils.get_arguments()
-        self.weight_path = args.weight_path
-        self.cfg_path = args.config_path
-        self.labels = utils.get_labels(args.classes_path)
+        # remove to run in flask app
+        # args = utils.get_arguments()
+        # self.weight_path = args.weight_path
+        # self.cfg_path = args.config_path
+        # self.labels = utils.get_labels(args.classes_path)
+        # args = utils.get_arguments()
+        self.weight_path = "./weights/yolov3-tiny_15000.weights"
+        self.cfg_path = "./cfg/yolov3-tiny.cfg"
+        self.labels = utils.get_labels("./cfg/yolo.names")
         self.threshold = threshold
 
         # Load model

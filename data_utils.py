@@ -33,15 +33,15 @@ def get_alphas_data(path):
 
     return data_train
 
+# error in flask app
+# def get_arguments():
+#     args = argparse.ArgumentParser()
+#     args.add_argument('-w', '--weight_path', help='link to weight path', default="./weights/yolov3-tiny_15000.weights")
+#     args.add_argument('-i', '--image_path', help='link to image file')
+#     args.add_argument('-cf', '--config_path', help='link to config path', default="./cfg/yolov3-tiny.cfg")
+#     args.add_argument('-n', '--classes_path', default="./cfg/yolo.names")
 
-def get_arguments():
-    args = argparse.ArgumentParser()
-    args.add_argument('-w', '--weight_path', help='link to weight path', default="./weights/yolov3-tiny_15000.weights")
-    args.add_argument('-i', '--image_path', help='link to image file')
-    args.add_argument('-cf', '--config_path', help='link to config path', default="./cfg/yolov3-tiny.cfg")
-    args.add_argument('-n', '--classes_path', default="./cfg/yolo.names")
-
-    return args.parse_args()
+#     return args.parse_args()
 
 
 def get_labels(path):
