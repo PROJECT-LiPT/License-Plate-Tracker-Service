@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, make_response
 import base64
 from flask_restx import Api, Resource
 import numpy as np
-from recognition import E2E # type: ignore
+from recognition import E2E
 import cv2
 import time
 from flask_cors import CORS
