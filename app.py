@@ -26,8 +26,9 @@ class MainClass(Resource):
 	def post(self):
 		try: 
 			formData = request.json
-			data = formData["base64"]
-
+			id = formData["id"]
+			uploader = formData["uploader"]
+			data = formData["imgUrl"]
 			def data_uri_to_cv2_img(uri):
 				encoded_data = uri.split(',')[1]
 				nparr = np.frombuffer(base64.b64decode(encoded_data), np.uint8)
@@ -41,16 +42,22 @@ class MainClass(Resource):
 				image = model.predict(src)
 				end = time.time()
 				print('Model process on %.2f s' % (end - start))
-				return (image)
-			result = ''
+				arrayResult = [image,end-start]
+				return arrayResult
+			result = []
 			if data != '':
 				result = imgTracker()
 			else :
 				result = 'Null Image'
 			response = jsonify({
-				"statusCode": 200,
-				"status": "Prediction made",
-				"result": result
+				"id": id,
+				"uploader": uploader,
+				"imgUrl": data,
+				"process": result[1],
+				"title": result[0],
+				"origin": 'Hồ Chí Minh',
+				"step1": '',
+				"step2": ''
 				})
 			response.headers.add('Access-Control-Allow-Origin', '*')
 			return response
