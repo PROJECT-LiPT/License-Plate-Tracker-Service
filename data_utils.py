@@ -12,8 +12,8 @@ def get_digits_data(path):
     for i in range(total_nb_data):
         data_train.append(data[i])
 
-    print("-------------DONE------------")
-    print('The number of train digits data: ', len(data_train))
+    # print("-------------DONE------------")
+    # print('The number of train digits data: ', len(data_train))
 
     return data_train
 
@@ -28,8 +28,8 @@ def get_alphas_data(path):
     for i in range(total_nb_data):
         data_train.append(data[i])
 
-    print("-------------DONE------------")
-    print('The number of train alphas data: ', len(data_train))
+    # print("-------------DONE------------")
+    # print('The number of train alphas data: ', len(data_train))
 
     return data_train
 

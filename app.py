@@ -49,7 +49,7 @@ class MainClass(Resource):
 				model = E2E()
 				image = model.predict(src)
 				end = time.time()
-				print('Model process on %.2f s' % (end - start))
+				# print('Model process on %.2f s' % (end - start))
 				step2_1 = cv2_img_to_base64('./step2_1.png')
 				step2_2 = cv2_img_to_base64('./step2_2.png')
 				arrayResult = [image,end-start, step2_1, step2_2]

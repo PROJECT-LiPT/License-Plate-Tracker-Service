@@ -59,7 +59,7 @@ class CNN_Model(object):
         # Model Checkpoint
         cpt_save = ModelCheckpoint('./weight.h5', save_best_only=True, monitor='val_acc', mode='max')
 
-        print("Training......")
+        # print("Training......")
         trainX, trainY = self.data.gen()
         trainX = np.array(trainX)
 

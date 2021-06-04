@@ -31,7 +31,7 @@ for fi in os.listdir(path):
         label = 31
     else:
         label = -1
-        ValueError("Don't match file")
+        # ValueError("Don't match file")
 
     img_fi_path = os.listdir(path + fi)
     for img_path in img_fi_path:
@@ -93,7 +93,7 @@ for fi in os.listdir(path):
         label = 20
     else:
         label = -1
-        ValueError("Don't match file")
+        # ValueError("Don't match file")
 
     img_fi_path = os.listdir(path + fi)
     for img_path in img_fi_path:
